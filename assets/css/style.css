@@ -1,0 +1,244 @@
+/* ----------------------------- */
+/* GENERAL
+/* ----------------------------- */
+
+@font-face {
+  font-family: 'Moderat';
+  src: url('../fonts/Moderat-Bold.woff2') format('woff2'),
+      url('../fonts/Moderat-Bold.woff') format('woff'),
+      url('../fonts/Moderat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat';
+  src: url('../fonts/Moderat-Medium.woff2') format('woff2'),
+      url('../fonts/Moderat-Medium.woff') format('woff'),
+      url('../fonts/Moderat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat';
+  src: url('../fonts/Moderat-Regular.woff2') format('woff2'),
+      url('../fonts/Moderat-Regular.woff') format('woff'),
+      url('../fonts/Moderat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Moderat', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+/* ----------------------------- */
+  /* HEADER
+/* ----------------------------- */
+.bg {
+  position: relative;
+  background: #FCC53B;
+  min-width: 21rem;
+  max-width: 40rem;
+  height: 100vh;
+  width: 30vw;
+}
+
+.ttl {
+  position: absolute;
+  pointer-events: none;
+  font-weight: 500;
+  font-size: 10vw;
+  min-width: 25rem;
+  width: 80vw;
+  left: 10vw;
+  top: 4vh;
+  z-index:1;
+}
+ @media all and (min-width: 980px) {
+  .ttl { font-size: 11rem; width: 62vw; }
+ }
+
+ .logo {
+  position: absolute;
+  padding: 2rem 5rem 2rem 2rem;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* ----------------------------- */
+  /* ICO
+/* ----------------------------- */
+ .ico {
+  height: auto;
+  position: absolute;
+  min-width: 16rem;
+  max-width: 24rem;
+  width: 28vw;
+  right: 8vw;
+  top: 13vh;
+ }
+
+ .ico__item {
+  height: 100%;
+  width: 100%;
+  z-index:-1;
+ }
+
+ .ico__item img {
+   object-fit: contain !important;
+ }
+
+/* ----------------------------- */
+  /* LINKS
+/* ----------------------------- */
+.links__item {
+  height: auto;
+  position: absolute;
+  min-width: 20rem;
+  max-width: 40rem;
+  width: 30vw;
+}
+
+.links__item > * {
+  border: 8px dotted #FCC53B;
+  transition: all ease 222ms;
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+.links__item:hover > * {
+  transform: scale(1.05);
+}
+
+.links__item a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  font-weight: 300;
+  padding: 4rem;
+}
+
+/* ----------------------------- */
+  /* PICTS
+/* ----------------------------- */
+.pict {
+  position: absolute;
+  pointer-events: none;
+  object-fit: cover;
+  z-index:-1;
+  right: 0;
+}
+
+.pict-b1 {
+  width: 77vw;
+  object-fit: cover;
+  min-height: 40vh;
+  bottom: 0;
+}
+
+.pict-r1 {
+  width: 60vw;
+  min-height: 40vh;
+  max-width: 70rem;
+  top: 40%;
+}
+
+.pict-r2 {
+  min-height: 33vh;
+  max-width: 45rem;
+  width: 40vw;
+  top: 28%;
+}
+
+.pict-r3 {
+  min-width: 55rem;
+  max-width: 99rem;
+  width: 75vw;
+  bottom: 0;
+}
+
+
+
+/* ----------------------------- */
+  /* UTILIIES
+/* ----------------------------- */
+
+.ratio-21x9{ padding-bottom: 42.85%; }
+.ratio-16x9{ padding-bottom: 56.25%; }
+.ratio-1x1 { padding-bottom: calc(100% - 8px); }
+.ratio-4x3 { padding-bottom: 75%; }
+.ratio-3x8 { padding-bottom: 37%; }
+.ratio-1x3 { padding-bottom: 33%; }
+
+[class*='ratio-'] {
+  overflow: hidden;
+  position: absolute;
+}
+
+[class*='ratio-'] img, 
+[class*='ratio-'] video, 
+[class*='ratio-'] iframe, 
+[class*='ratio-'] embed,
+[class*='ratio-'] a {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* ----------------------------- */
+  /* LINKS & BG POSITION BY TEMPLATE
+/* ----------------------------- */
+#bien-etre .links__item:nth-child(1) { top: 26vh; left: 40vw; }
+#bien-etre .links__item:nth-child(2) { top: 61vh; left: 33vw; }
+#bien-etre .links__item:nth-child(3) { bottom: 25vh; left: 60vw; }
+
+#design .links__item:nth-child(1) { top: 19vh; right: 36vw; }
+#design .links__item:nth-child(2) { top: 48vh; left: 36vw; }
+#design .links__item:nth-child(3) { bottom: 28vh; left: 53vw; }
+
+#performance .links__item { width: 25vw; }
+#performance .links__item:nth-child(1) { top: 23vh; right: 39vw; }
+#performance .links__item:nth-child(2) { top: 42vh; left: 32vw; }
+#performance .links__item:nth-child(3) { bottom: 41vh; left: 47vw; }
+#performance .links__item:nth-child(4) { bottom: 23vh; left: 33vw; }
+#performance .links__item:nth-child(5) { bottom: 22vh; left: 65vw; }
+
+#air .links__item:nth-child(1) { top: 21vh; left: 40vw; }
+#air .links__item:nth-child(2) { top: 61vh; left: 34vw; }
+#air .links__item:nth-child(3) { bottom: 24vh; left: 60vw; }
+
+#confort .links__item { width: 35vw; }
+#confort .links__item:nth-child(1) { top: 23vh; left: 33vw; }
+#confort .links__item:nth-child(2) { bottom: 34vh; left: 46vw; }
+
+#respect .ico { top: 21vh; right: 5vw; }
+#respect .links__item:nth-child(1) { top: 26vh; left: 33vw; }
+#respect .links__item:nth-child(2) { top: 37vh; left: 65vw; }
+#respect .links__item:nth-child(3) { bottom: 47vh; left: 37vw; }
+
+#silence .links__item:nth-child(1) { top: 26vh; left: 33vw; }
+#silence .links__item:nth-child(2) { top: 37vh; left: 65vw; }
+#silence .links__item:nth-child(3) { bottom: 47vh; left: 37vw; }
+
+#serenite .links__item:nth-child(1) { top: 24vh; left: 39vw; }
+#serenite .links__item:nth-child(2) { top: 43vh; left: 64vw; }
+#serenite .links__item:nth-child(3) { bottom: 29vh; left: 33vw; }
+
+#innovations .links__item:nth-child(1) { top: 24vh; left: 39vw; }
+#innovations .links__item:nth-child(2) { top: 43vh; left: 64vw; }
+#innovations .links__item:nth-child(3) { bottom: 29vh; left: 33vw; }

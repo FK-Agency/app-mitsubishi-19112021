@@ -1,0 +1,36 @@
+############################################
+# Defaults gitignore rules
+############################################
+
+# Racine
+.htaccess
+.DS_Store
+.ftpconfig
+.ftpconfigdev
+.ftpconfigprod
+wp-config.php
+sources
+
+# Miscleaneous 
+log/
+sonde/
+change_url/
+node_modules/
+**/.DS_Store
+**/**/.DS_Store
+
+# Plugins
+wp-content/backups-dup-pro/
+wp-content/ai1wm-backups/
+wp-content/updraft/
+
+# Compilateur & fichiers compilés
+wp-content/themes/**/node_modules/
+wp-content/themes/**/public/
+
+
+############################################
+# Custom gitignore rules for this website
+############################################
+
+# ...
